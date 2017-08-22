@@ -1,0 +1,94 @@
+==============================
+
+Membuat Database :
+CREATE DATABASE *namadatabase*;
+
+contoh :
+create database daffa_x_praktik01_rpl_250717;
+
+==============================
+
+Masukan kedalam Database :
+USE *namadatabase*;
+
+contoh :
+use daffa_x_praktik01_rpl_250717;
+
+==============================
+
+Membuat Table :
+CREATE TABLE *namatable* (*namafield* *typedata*);
+
+contoh :
+create table MyBiodata (Nama varchar(50), Nomor int(10));
+
+==============================
+
+Memasukan data/nilai kedalam kolom :
+INSERT INTO *namatable* (*namafield*) VALUES (*nilai*);
+
+contoh :
+insert into MyBiodata (Nama, Nomor) values (‘Daffa’, 001);
+
+*bisa juga tanpa menggunakan namafield tapi harus sesuai urutan field saat membuat table, contoh :
+insert into MyBiodata values (‘Daffa’, 001);
+
+==============================
+
+Menampilkan data/nilai yang ada didalam table :
+SELECT * FROM *namatable*;
+
+contoh :
+select * from MyBiodata;
+
+==============================
+
+Menghapus data/nilai :
+DELETE FROM *namatable* WHERE *namafield* = ‘*nilaiyangmaudihapus*’;
+
+contoh :
+delete from MyBiodata where Nama = 'Daffa';
+
+==============================
+
+Mensortir data :
+SELECT * FROM *namatable* WHERE *namafield* *nilaifilter*;
+
+contoh :
+select * from KELAS where JumlahSiswa<7;
+
+==============================
+
+Menambah field dalam table :
+ALTER TABLE *namatable* ADD *namafieldbaru* *typedata*;
+
+contoh :
+alter table KELAS add LuasRuangan char(20);
+
+==============================
+
+
+
+==============================
+
+
+
+==============================
+
+
+
+==============================
+
+
+
+==============================
+
+
+
+==============================
+
+
+
+==============================
+
+
