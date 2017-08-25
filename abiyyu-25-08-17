@@ -1,0 +1,38 @@
+Jum’at, 25 Agustus 2017
+
+Mencari data dengan katakunci
+
+1.	Pertama buat dulu database dengan nama siswa_abiyyu_250817 dan table dengan nama biodata sebagai berikut
+
+CREATE DATABASE siswa_abiyyu_250817
+USE siswa_abiyyu_250817
+CREATE TABLE biodata (id_siswa char(5) NOT NULL, nama varchar(30), asal_kota varchar(20), kelas char(10), jenis_kelamin char(2), phone varchar(20))
+ 
+2.	Kemudian isi data seperti berikut
+
+INSERT INTO biodata VALUES ('00001', 'Andiani Putri', 'Jakarta', 'X-RPL', 'PR', '0821993473')
+INSERT INTO biodata VALUES ('00002', 'Dedi Gunawan', 'Jakarta', 'X-RPL', 'LK', '0821998796')
+INSERT INTO biodata VALUES ('00003', 'Doni Setiawan', 'Bekasi', 'X-RPL', 'LK', '0821227654')
+INSERT INTO biodata VALUES ('00004', 'Aisyah Asyifa', 'Bandung', 'X-TKJ', 'PR', '0821335554')
+INSERT INTO biodata VALUES ('00005', 'Zaidan Basman', 'Jakarta', 'X-TKJ', 'LK', '0821308934')
+INSERT INTO biodata VALUES ('00006', 'Faisal Hilman', 'Bandung', 'X-TKJ', 'LK', '0821300338')
+INSERT INTO biodata VALUES ('00007', 'Putri Clarisa', 'Bekasi', 'XI-RPL', 'PR', '0821302299')
+INSERT INTO biodata VALUES ('00008', 'Fatimah Azzahra', 'Bekasi', 'XI-RPL', 'PR', '0821304455')
+INSERT INTO biodata VALUES ('00009', 'Azkia Hanifa', 'Bandung', 'XI-RPL', 'PR', '0821304476')
+INSERT INTO biodata VALUES ('00010', 'Aan Anwar', 'Bandung', 'XI-TKJ', 'LK', '0821304789')
+ 
+3.	Setelah itu untuk mencoba pencariannya kita bisa menggunakan kueri sebagai berikut
+
+SELECT * FROM biodata WHERE nama LIKE '%putri%'
+ 
+4.	Gunakan tanda persen (%) didepan (‘%contoh’) untuk mencari kata yang ada diakhir
+
+SELECT * FROM biodata WHERE nama LIKE '%an'
+ 
+5.	Atau gunakan tanda persen (%) dibelakang (‘contoh%’) untuk mencari kata yang ada diawal
+
+SELECT * FROM biodata WHERE nama LIKE 'a%'
+ 
+6.	Lalu bisa juga mencari yang tidak mengandung kata tersebut dengan menggunakan NOT LIKE
+
+SELECT * FROM biodata WHERE nama NOT LIKE '%z%' (penggunaan tanda persen ‘%’ sama seperti di atas)
